@@ -117598,7 +117598,7 @@ function loadOrBuildManifest(github, inputs) {
         }
         : {};
     core.debug('Loading manifest from config file');
-    return release_please_1.Manifest.fromManifest(github, github.repository.defaultBranch, inputs.configFile, inputs.manifestFile, manifestOverrides);
+    return release_please_1.Manifest.fromManifest(github, github.repository.defaultBranch, inputs.configFile, inputs.manifestFile, manifestOverrides, inputs.path);
 }
 async function main() {
     core.info(`Running release-please version: ${release_please_1.VERSION}`);
